@@ -1,0 +1,30 @@
+@import "var";
+@import "components/header";
+@import "components/section";
+@import "components/container";
+@import "components/portrait";
+
+
+* {
+  font-family: 'Roboto';
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, a, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 50px 10px;
+}
+
+h1 {
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: 'Roboto Slab';
+}
+
+img {
+  max-width: 100%;
+}

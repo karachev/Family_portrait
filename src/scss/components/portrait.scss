@@ -1,0 +1,157 @@
+.portrait {
+  $this: &;
+
+  position: relative;
+  width: 140px;
+  height: 200px;
+  background-color: #f4f4f4;
+
+  &__back-hair {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 120px;
+    background-color: darkorange;
+    border-radius: 50% 50% 0 0;
+  }
+
+  &__body {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+  }
+
+  &__t-shirt {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: underline;
+
+    background-color: violet;
+    border-radius: 50% 50% 0 0;
+  }
+
+  &__neck {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 40px;
+    background-color: bisque;
+
+    &:after {
+      position: absolute;
+      display: block;
+      content: "";
+
+      bottom: -10px;
+      left: -10px;
+      width: 40px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: bisque;
+    }
+  }
+
+  &__head {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-color: bisque;
+    width: 80px;
+    height: 100px;
+    border-radius: 50%;
+  }
+
+  &__front-hair {
+    position: absolute;
+    top: 0;
+  }
+
+  &__top {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__eyes {
+    position: absolute;
+    top: 40px;
+  }
+
+  &__eyebrow {
+    position: absolute;
+    top: -10px;
+    width: 20px;
+    height: 5px;
+    background-color: darkorange;
+    border-radius: 0 50% 0 50%;
+  }
+
+  &__eye {
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 10px;
+
+    &.-left {
+      position: absolute;
+      left: 15px;
+
+      #{$this}__eyebrow {
+        left: -5px;
+      }
+    }
+
+    &.-right {
+      position: absolute;
+      right: 15px;
+
+      #{$this}__eyebrow {
+        right: -5px;
+        border-radius: 50% 0 50% 0;
+      }
+    }
+  }
+
+  &__eyeball {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+  }
+
+  &__bottom {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+  }
+
+  &__mouth {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 20px;
+    border-radius: 50%;
+    border-bottom: 2px solid black;
+  }
+}
