@@ -201,14 +201,77 @@
 
   &__mouth {
     position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 15px;
+    left: 0;
+    right: 0;
+    margin: auto;
     width: 30px;
     height: 20px;
-    border-radius: 50%;
-    border-left: 3px solid transparent;
-    border-right: 3px solid  transparent;
     border-bottom: 3px solid black;
+
+    &.smile {
+      border-radius: 50%;
+      border-left: 3px solid transparent;
+      border-right: 3px solid  transparent;
+    }
+
+    &.sad {
+      top: 25px;
+      border-radius: 50%;
+      transform: rotate(180deg);
+      border-left: 3px solid transparent;
+      border-right: 3px solid  transparent;
+    }
+
+    &.lol {
+      top: 10px;
+      width: 40px;
+      height: 27px;
+      border-radius: 50%;
+      border-left: 0 solid transparent;
+      border-right: 0 solid  transparent;
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 8px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 100%;
+        height: 2px;
+        background-color: $black;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 1px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 93%;
+        height: 7px;
+        background-color: $white;
+        border-radius: 0 0 50% 50% / 0 0 100% 100%;
+      }
+    }
+  }
+
+  &__mustache {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 20px;
+    height: 5px;
+    margin: auto;
+    background-color: $black;
+    &.old-car {
+      position: absolute;
+      top: 18px;
+      display: block;
+      width: 22px;
+      height: 8px;
+    }
   }
 }
