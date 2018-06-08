@@ -6,72 +6,6 @@
   height: 200px;
   background-color: #f4f4f4;
 
-  &__back-hair {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: darkorange;
-
-    &.-straight {
-      width: 100px;
-      border-radius: 50% 50% 0 0;
-    }
-
-    &.-long {
-      height: 150px;
-    }
-
-    &.-shoulder-length {
-      height: 120px;
-    }
-
-    &.-short {
-      height: 70px;
-      border-radius: 50% 50% 0 0;
-    }
-
-    &.-bold {
-      width: 100px;
-      top: 25px;
-      height: 60px;
-      border-radius: 50% 50% 10px 10px;
-    }
-
-    &.-afro {
-      top: -20px;
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-
-      &:before,
-      &:after {
-        position: absolute;
-        display: block;
-        content: '';
-      }
-
-      &:before {
-        top: 30px;
-        right: 20px;
-        width: 30px;
-        height: 5px;
-        background-color: black;
-        transform: rotate(45deg);
-      }
-
-      &:after {
-        top: 20px;
-        right: 25px;
-        width: 10px;
-        height: 15px;
-        background-color: black;
-        transform: rotate(45deg);
-        border-radius: 4px 4px 0 0;
-      }
-    }
-  }
-
   &__body {
     position: absolute;
     bottom: 0;
@@ -154,6 +88,22 @@
     height: 5px;
     background-color: darkorange;
     border-radius: 0 50% 0 50%;
+
+    &.-angry {
+      transform:rotateZ(20deg);
+    }
+
+    &.-sad {
+      transform:rotateZ(-20deg);
+    }
+
+    &.-bold {
+      height: 9px;
+    }
+
+    &.-square {
+      border-radius: 0;
+    }
   }
 
   &__eye {
@@ -168,6 +118,19 @@
 
       #{$this}__eyebrow {
         left: -5px;
+
+        &.-angry {
+          transform:rotateZ(-20deg);
+        }
+
+        &.-sad {
+          transform:rotateZ(20deg);
+        }
+
+        &.-bold {
+          height: 9px;
+        }
+
       }
     }
 
@@ -178,6 +141,10 @@
       #{$this}__eyebrow {
         right: -5px;
         border-radius: 50% 0 50% 0;
+
+        &.-square {
+          border-radius: 0;
+        }
       }
     }
   }
@@ -199,12 +166,31 @@
     width: 100%;
   }
 
+  &__beard {
+    position: absolute;
+    left: 3px;
+    background-color: brown;
+
+    &.-lumberjack {
+      width: 74px;
+      height: 50px;
+      border-radius: 0 0 50% 50%;
+    }
+  }
+
+  &__mustache {
+
+  }
+
+
   &__mouth {
     position: absolute;
+
     top: 15px;
     left: 0;
     right: 0;
     margin: auto;
+
     width: 30px;
     height: 20px;
     border-bottom: 3px solid black;

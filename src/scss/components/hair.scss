@@ -1,0 +1,97 @@
+.portrait {
+  $this: &;
+
+  &__back-hair {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: darkorange;
+
+    &.-straight {
+      width: 100px;
+      border-radius: 50% 50% 0 0;
+    }
+
+    &.-long {
+      height: 150px;
+    }
+
+    &.-shoulder-length {
+      height: 120px;
+    }
+
+    &.-short {
+      height: 70px;
+      border-radius: 50% 50% 0 0;
+    }
+
+    &.-bold {
+      width: 100px;
+      top: 25px;
+      height: 60px;
+      border-radius: 50% 50% 10px 10px;
+    }
+
+    &.-afro {
+      top: -20px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+
+      &:before,
+      &:after {
+        position: absolute;
+        display: block;
+        content: '';
+      }
+
+      &:before {
+        top: 30px;
+        right: 20px;
+        width: 30px;
+        height: 5px;
+        background-color: black;
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        top: 20px;
+        right: 25px;
+        width: 10px;
+        height: 15px;
+        background-color: black;
+        transform: rotate(45deg);
+        border-radius: 4px 4px 0 0;
+      }
+    }
+
+    &.-tail {
+      top: 10px;
+      height: 15px;
+      width: 15px;
+      border-radius: 3px;
+    }
+
+    &.-punk {
+      top: 0;
+      height: 40px;
+      width: 10px;
+    }
+  }
+
+  &__front-hair {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: darkorange;
+
+    &.-small-afro {
+      top: -10px;
+      width: 70px;
+      height: 34px;
+      border-radius: 50% 50% 0 0;
+    }
+  }
+}

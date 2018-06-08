@@ -1,0 +1,100 @@
+.portrait__beard {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 40px;
+  background: #000;
+  z-index: 2;
+  border-radius: 0 0 76px 76px;
+  width: 45px;
+  bottom: -31px;
+
+  &.-long {
+    height: 55px;
+  }
+
+  &.-little {
+    height: 10px;
+    width: 22px;
+    top: 115px;
+  }
+
+  &.-small {
+    width: 12px;
+    height: 6px;
+    border-radius: 2px;
+  }
+
+  &.-old-dutch {
+    width: 40px;
+    height: 20px;
+    top: 113px;
+    &:before {
+      content: '';
+      width: 30px;
+      height: 33px;
+      display: block;
+      position: absolute;
+      bottom: 3px;
+      left: -5px;
+      border-left: 5px solid $black;
+      border-top: 18px solid transparent;
+      transform: rotate(-40deg);
+      border-radius: 10px;
+    }
+    &:after {
+      content: '';
+      width: 30px;
+      height: 33px;
+      display: block;
+      position: absolute;
+      bottom: 3px;
+      right: -5px;
+      border-right: 5px solid $black;
+      border-top: 18px solid transparent;
+      transform: rotate(40deg);
+      border-radius: 10px;
+    }
+  }
+
+  &.-trinagle {
+    border-left: 29px solid transparent;
+    border-right: 29px solid transparent;
+    border-top: 40px solid $black;
+    background: none;
+    border-radius: 0;
+  }
+  &.-base {
+    background: $black;
+    display: block;
+    height: 20px;
+    width: 44px;
+    border-radius: 0;
+    &:before {
+      border-top: 20px solid $black;
+      border-left: 22px solid transparent;
+      border-right: 22px solid transparent;
+      content: "";
+      height: 0;
+      left: 0;
+      position: absolute;
+      bottom: -20px;
+      width: 0;
+    }
+  }
+
+  &.-bristle {
+    height: 22px;
+    width: 30px;
+    top: 97px;
+    border: 10px solid rgba(0,0,0,0.1);
+    border-left: 0 solid transparent;
+    border-right: 0 solid transparent;
+    border-bottom: 10px solid transparent;
+    border-radius: 50px;
+    transform: rotate(180deg);
+    background: none;
+  }
+}
+
