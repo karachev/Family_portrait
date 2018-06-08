@@ -7,6 +7,9 @@
   height: 5px;
   margin: auto;
   background-color: $black;
+  svg {
+    display: none;
+  }
   .mustache {
     display: none;
   }
@@ -23,11 +26,21 @@
     margin: 0 auto;
     width: 60px;
     height: 30px;
-    background-image: url("../img/fredrick.svg");
-    background-size: 100%;
-    background-repeat: no-repeat;
+    //background-image: url("../img/fredrick.svg");
+    //background-size: 100%;
+    //background-repeat: no-repeat;
     background-color: transparent;
     z-index: 3;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      g {
+        fill: $black;
+      }
+    }
   }
   &.picasso {
     top: 2px;
