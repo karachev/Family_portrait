@@ -1,0 +1,57 @@
+.portrait__mustache {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 20px;
+  height: 5px;
+  margin: auto;
+  background-color: $black;
+  .mustache {
+    display: none;
+  }
+  &.old-car {
+    position: absolute;
+    top: 18px;
+    display: block;
+    width: 22px;
+    height: 8px;
+  }
+  &.fredrick {
+    top: 11px;
+    display: block;
+    margin: 0 auto;
+    width: 60px;
+    height: 30px;
+    background-image: url("../img/fredrick.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    z-index: 3;
+  }
+  &.picasso {
+    top: 2px;
+    display: block;
+    width: 133px;
+    background-color: transparent;
+    transform: translateX(-20%);
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      display: block;
+      width: 50%;
+      height: 1px;
+      background-color: $black;
+    }
+    &:before {
+      left: 0;
+      transform: rotate(30deg);
+    }
+    &:after {
+      right: 0;
+      transform: rotate(-30deg);
+    }
+  }
+}
